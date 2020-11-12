@@ -104,12 +104,12 @@ class CustomEnchantManager
         }
         $property->setValue($vanillaEnchantments);
 
-        self::registerEnchantment(new AttackerDeterrentEnchant($plugin, CustomEnchantIds::CURSED, "Cursed", [Effect::WITHER], [60], [1], CustomEnchant::RARITY_UNCOMMON));
-        self::registerEnchantment(new AttackerDeterrentEnchant($plugin, CustomEnchantIds::DRUNK, "Drunk", [Effect::SLOWNESS, Effect::MINING_FATIGUE, Effect::NAUSEA], [60, 60, 60], [1, 1, 0]));
+        self::registerEnchantment(new AttackerDeterrentEnchant($plugin, CustomEnchantIds::CURSED, "Cursed", [Effect::WITHER], [60], [1], CustomEnchant::RARITY_UNCOMMON) Effect::NAUSEA], [60, 60, 60], [1, 1, 0]));
         self::registerEnchantment(new AttackerDeterrentEnchant($plugin, CustomEnchantIds::FROZEN, "Frozen", [Effect::SLOWNESS], [60], [1]));
         self::registerEnchantment(new AttackerDeterrentEnchant($plugin, CustomEnchantIds::HARDENED, "Hardened", [Effect::WEAKNESS], [60], [1], CustomEnchant::RARITY_UNCOMMON));
         self::registerEnchantment(new AttackerDeterrentEnchant($plugin, CustomEnchantIds::POISONED, "Poisoned", [Effect::POISON], [60], [1], CustomEnchant::RARITY_UNCOMMON));
         self::registerEnchantment(new AttackerDeterrentEnchant($plugin, CustomEnchantIds::REVULSION, "Revulsion", [Effect::NAUSEA], [20], [0], CustomEnchant::RARITY_UNCOMMON));
+        self::registerEnchantment(new AttackerDeterrentEnchant($plugin, CustomEnchantIds::STARVE, "Starve", [Effect::HUNGER], [60], [1], CustomEnchant::RARITY_UNCOMMON) Effect::HUNGER], [60, 60, 60], [1, 1, 0]));
 
         self::registerEnchantment(new ConditionalDamageMultiplierEnchant($plugin, CustomEnchantIds::AERIAL, "Aerial", function (EntityDamageByEntityEvent $event) {
             return $event->getDamager()->isOnGround();
